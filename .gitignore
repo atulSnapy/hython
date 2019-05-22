@@ -1,7 +1,8 @@
+/githidden
 /__pycache__
 /build
 /dist
 main.exe
 main.spec
 *.pyc
-readme-template.md
+local_test*
