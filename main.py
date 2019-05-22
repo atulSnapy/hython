@@ -46,9 +46,9 @@ def main():
         print("हायथन संस्करण:", VERSION)
         print('"हायथन <फाईल>" रन करने हेतु।')
         print('"हायथन <फाईल> <और_फाईले> .." अनुवाद करने हेतु।')
-        quit()
+        exit()
 
-    if sys.argv[1] == "t":
+    if sys.argv[1] == "t" or sys.argv[1] == "अ":
         for i in range(2, len(sys.argv)):
             transpile(sys.argv[i])
             print("...", sys.argv[i])
