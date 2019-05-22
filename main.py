@@ -1,5 +1,6 @@
 import sys, subprocess
 import source_code as sc
+VERSION = "1.0"
 
 def transpile(file_name):
     ids             = get_ids()
@@ -37,6 +38,15 @@ def get_ids():
 
 
 def main():
+    if sys.argv[1] == "--version" or sys.argv[1] == "--help" or sys.argv[1] == "--संस्करण" or sys.argv[1] == "--सहायता"  or sys.argv[1] == "--मदद" :
+        print("hython version:", VERSION)
+        print('"hython <file_name>" to run')
+        print('"hython t <file_name> <other_files> .." to transpile')
+        print(" ---------------------- ")
+        print("हायथन संस्करण:", VERSION)
+        print('"हायथन <फाईल>" रन करने हेतु।')
+        print('"हायथन <फाईल> <और_फाईले> .." अनुवाद करने हेतु।')
+        quit()
 
     if sys.argv[1] == "t":
         for i in range(2, len(sys.argv)):
