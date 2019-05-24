@@ -1,6 +1,6 @@
 import sys, subprocess
 import source_code as sc
-VERSION = "1.0.2"
+VERSION = "1.0.3"
 
 def transpile(file_name):
     ids             = get_ids()
@@ -61,7 +61,6 @@ def get_ids():
         while	जबतक
         with	लेकर
         yield	उपज
-        . .
         abs(	समपूर्ण(
         all(	सब(
         any(	कोईभी(
@@ -200,7 +199,6 @@ def get_ids():
         symmetric_difference_update(	सममित_अंतर_जोडो(
         union(	सम्मिलन(
         update(	सम्मिलन_जोडो(
-        . .
         == =
         = <-"""
     id_pair_arr = id_string.strip().split('\n')
@@ -208,6 +206,11 @@ def get_ids():
     
     for id_pair in id_pair_arr:
         ids.append(tuple(id_pair.split()))
+
+    # this will sort in asending order accoding to hindi words
+    ids.sort(key = lambda x: len(x[1]), reverse = True)
+    #this will make sure that "=" appers before "<-"
+    ids[-1], ids[-2] = ids[-2], ids[-1]
     return ids
 
 
@@ -220,9 +223,7 @@ def main():
         print("हायथन संस्करण:", VERSION)
         print('"हायथन <फाईल>" रन करने हेतु।')
         print('"हायथन <फाईल> <और_फाईले> .." अनुवाद करने हेतु।')
-        exit()
-
-    if sys.argv[1] == "t" or sys.argv[1] == "अ":
+    elif sys.argv[1] == "t" or sys.argv[1] == "अ":
         for i in range(2, len(sys.argv)):
             transpile(sys.argv[i])
             print("...", sys.argv[i])
