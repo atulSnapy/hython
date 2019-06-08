@@ -1,6 +1,6 @@
 import sys, subprocess
 import source_code as sc
-VERSION = "1.0.3"
+VERSION = "1.0.4"
 
 def transpile(file_name):
     ids             = get_ids()
