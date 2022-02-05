@@ -1,13 +1,22 @@
 try:
     def मुख्य():      # line-1
-        क = input("क का मुल्य :")      # line-2
-        ख = input("ख का मुल्य :")      # line-3
-          # line-4
-        क = int(क)      # line-5
-        ख = int(ख)      # line-6
-          # line-7
-        print("क+ख=", क+ख)      # line-8
-    मुख्य()      # line-9
+        print("STARTING")      # line-2
+          # line-3
+        क = input("क का मुल्य :")      # line-4
+        ख = input("ख का मुल्य :")      # line-5
+          # line-6
+        print("READ DONE")      # line-7
+          # line-8
+        क = int(क)      # line-9
+        ख = int(ख)      # line-10
+          # line-11
+        print("ADD DONE")      # line-12
+          # line-13
+        print("क+ख=", क+ख)      # line-14
+          # line-15
+        print("EXITING")      # line-16
+          # line-17
+    मुख्य()      # line-18
 
 except Exception as e:
     print(e)

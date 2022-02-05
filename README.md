@@ -11,17 +11,6 @@ Like Python but in Hindi (Devnagri)
 
 Hython is a Hindi Programming Language. Syntax of Hython is just like Python
 
-अपवाद(सिवाय) - Exception
-```
-+--------+--------+
-|  पायथन |  हायथन |
-| Pyhton | Hython |
-+--------+--------+
-|    =   |   <-   |
-+--------+--------+
-|   ==   |    =   |
-+--------+--------+
-```
 
 उदाहरण - Example :
 ```

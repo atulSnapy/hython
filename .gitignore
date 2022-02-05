@@ -6,3 +6,4 @@ main.exe
 main.spec
 *.pyc
 local_test*
+/.vscode

@@ -3,8 +3,8 @@ as	जैसे
 assert	निश्चित
 break	अवरोध
 class	वर्ग
-continue    जारी
-def परि
+continue	जारी
+def	परि
 del	मिटाओ
 elif	या_अगर
 else	अन्यथा
@@ -132,9 +132,9 @@ rsplit(	दाया_विभाजन(
 rstrip(	दाया_छाट(
 split(	विभाजन(
 splitlines(	पंक्ति_विभाजन(
-startswith( शूरू_में(
-strip(  छाट(
-swapcase(   अक्षर_बदलो(
+startswith(	शूरू_में(
+strip(	छाट(
+swapcase(	अक्षर_बदलो(
 title(	शीर्षक(
 translate(	अनुवाद(
 upper(	ऊपरी(
@@ -169,5 +169,3 @@ symmetric_difference(	सममित_अंतर(
 symmetric_difference_update(	सममित_अंतर_जोडो(
 union(	सम्मिलन(
 update(	सम्मिलन_जोडो(
-== =
-= <-
