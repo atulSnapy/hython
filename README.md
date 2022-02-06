@@ -12,9 +12,9 @@ Like Python but in Hindi (Devnagri)
 Hython is a Hindi Programming Language. Syntax of Hython is just like Python
 
 
-## WS-Plus हिंदी कुजीपटल (Hindi Keyboard)
+## WS-Plus हिंदी कुजीपटल / कीबोर्ड
 
-[WS-Plus हिंदी कुजीपटल Hindi Keyboard यहा से डाउनलोड करे|](/WX-plus/)
+[WS-Plus हिंदी कुजीपटल / कीबोर्ड यहा से डाउनलोड करे|](/WX-plus/)
 
 
 ## हायथन उदाहरण Hython Example
@@ -59,16 +59,22 @@ except Exception as e:
 
 हायथन के लिए आवश्यकताएँ
 
-##### * पायथन 3 और हायथन
+* हिंदी कुजीपटल / कीबोर्ड
+* पायथन 3
+* हायथन
 
-#### पायथन 3
+### 1. हिंदी कुजीपटल / कीबोड
+* [यहा से डाउनलोड करे|](/WX-plus/)
+
+### 2. पायथन 3
 
 * पायथन की वेबसाइट पर जाए और पायथन 3 डाउनलोड करें।
-* अब पायथन इनस्टॉल करें।
-* इनस्टॉल करते समय Add to Path को चुनें।
-* अब कमांड लाईन में "python3 --version" लिख कर पायथन की जाँच कर लें।
+	- अब पायथन इनस्टॉल करें।
+	- इनस्टॉल करते समय Add to Path को चुनें।
+	- अब कमांड लाईन में "python3 --version" लिख कर पायथन की जाँच कर लें।
+* आप विडोज स्टोर से भी "python3" ढुंढ कर इनस्टॉल कर सकते है।
 
-#### हायथन डाउनलोड
+### 3. हायथन डाउनलोड
 
 * [यहा से हायथन डाउनलोड करें। (संस्करण : 1.0.5)](https://github.com/atulSnapy/hython/blob/master/releases/Release%201/hython_v1.0.5.zip?raw=true)
 * जिप(zip) फाईल को extract करें और "हायथन.exe" एवम् "hython.exe" को hython नाम के फोलडर में रखें।
