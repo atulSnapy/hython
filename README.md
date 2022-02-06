@@ -63,7 +63,7 @@ except Exception as e:
 
 #### हायथन डाउनलोड
 
-* [यहा](https://github.com/atulSnapy/hython-releases) से हायथन डाउनलोड करें।
+* [यहा](releases/Release%201) से हायथन डाउनलोड करें।
 * जिप(zip) फाईल को extract करें और "हायथन.exe" एवम् "hython.exe" को hython नाम के फोलडर में रखें।
 * अब उस फोलडर को "system path" में जोड दें।
 * अब कमांड लाईन में "hython --version" या "हायथन --संस्करण" लिख कर हायथन की जाँच कर लें।
