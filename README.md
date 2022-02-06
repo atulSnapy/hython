@@ -12,7 +12,13 @@ Like Python but in Hindi (Devnagri)
 Hython is a Hindi Programming Language. Syntax of Hython is just like Python
 
 
-उदाहरण - Example :
+## WS-Plus हिंदी कुजीपटल (Hindi Keyboard)
+
+[WS-Plus हिंदी कुजीपटल (Hindi Keyboard) यहा से डाउनलोड करे|](/WX-plus/)
+
+
+## हायथन उदाहरण Hython Example
+
 ```
 परि मुख्य():
     क <- पुछो("क का मुल्य :")
@@ -46,6 +52,7 @@ try:
 except Exception as e:
     print(e)
 ```
+
 
 ## हायथन कैसे प्राप्त करें? How to get Hython?
 
