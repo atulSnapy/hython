@@ -1,3 +1,5 @@
+
+ids = """
 and	और
 as	जैसे
 assert	निश्चित
@@ -169,3 +171,4 @@ symmetric_difference(	सममित_अंतर(
 symmetric_difference_update(	सममित_अंतर_जोडो(
 union(	सम्मिलन(
 update(	सम्मिलन_जोडो(
+"""

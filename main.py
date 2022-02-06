@@ -1,5 +1,6 @@
 import sys, subprocess
 import source_code as sc
+import eng_hin
 
 VERSION = "1.0.5"
 
@@ -37,8 +38,9 @@ def transpile(file_name):
 
 
 def get_ids():
-    with open("id.csv", "r") as file:
-        id_string = file.read()
+    # with open("id.csv", "r") as file:
+    #     id_string = file.read()
+    id_string = eng_hin.ids
     id_pair_arr = id_string.strip().split("\n")
     ids = []
 
@@ -53,8 +55,9 @@ def get_ids():
 
 
 def main():
-    if (
-        sys.argv[1] == "--version"
+    print()
+    if (len(sys.argv) == 1
+        or sys.argv[1] == "--version"
         or sys.argv[1] == "--help"
         or sys.argv[1] == "--संस्करण"
         or sys.argv[1] == "--सहायता"
@@ -81,3 +84,4 @@ def main():
 
 
 main()
+
