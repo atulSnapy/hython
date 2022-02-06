@@ -14,7 +14,7 @@ Hython is a Hindi Programming Language. Syntax of Hython is just like Python
 
 ## WS-Plus हिंदी कुजीपटल / कीबोर्ड
 
-[WS-Plus हिंदी कुजीपटल / कीबोर्ड यहा से डाउनलोड करे|](/WX-plus/)
+[WS-Plus हिंदी कुजीपटल / कीबोर्ड यहा से डाउनलोड करे](/WX-plus)
 
 
 ## हायथन उदाहरण Hython Example
@@ -64,7 +64,6 @@ except Exception as e:
 * हायथन
 
 ### 1. हिंदी कुजीपटल / कीबोड
-* [यहा से डाउनलोड करे|](/WX-Plus)
 * [यहा से डाउनलोड करें](/WX-plus)
 
 ### 2. पायथन 3
