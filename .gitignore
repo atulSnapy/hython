@@ -9,3 +9,4 @@ local_test*
 /.vscode
 source/build.bat
 source/hython.spec
+source/local_test
