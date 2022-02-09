@@ -10,7 +10,20 @@ class Source_Code():
         self.source_line        = source_line
         self.source_line_number = source_line_number
 
-
+    # this will get list of all the imports (local and global/modules)
+    def get_import(self) :
+        import_name = ""
+        # if the line is a import statement
+        if self.source_line.startswith("आयात ") :
+            temp_list = self.source_line.split(" ")
+            print(temp_list)
+            import_name = temp_list[1]
+            # # adding the new file name
+            # temp_list[1] = temp_list[1].strip()+"_"
+            # print(temp_list)
+            # self.source_line = " ".join(temp_list) + "\n"
+            # print(self.source_line)
+        return import_name
 
     # this will find all the string thing
     def find_string(self):
@@ -20,7 +33,7 @@ class Source_Code():
         # array for storing position of single quotes (\' not included) 
         single_quote_pos = []
 
-        # to find double quotes
+        # to find double and single quotes
         for i in range(0, len(self.source_line)):
 
             if self.source_line[i] == '"':
@@ -28,22 +41,17 @@ class Source_Code():
                 # when first double quote if found or a double quote without preceding \
                 if len(double_quote_pos) == 0 or self.source_line[i-1] != "\\":
                     double_quote_pos.append(i)
-        
-        # when number of double quotes are odd i.e. string syntax is wrong
-        if len(double_quote_pos) % 2 != 0:
-            raise SyntaxError("String Error")
-            quit()
-
-
-
-        # to find single quotes
-        for  i in range(0, len(self.source_line)):
 
             if self.source_line[i] == "'":
 
                 # when first single quote is found or a single wuote without preceding \
                 if len(single_quote_pos) == 0 or self.source_line[i-1] != "\\":
                     single_quote_pos.append(i)
+        
+        # when number of double quotes are odd i.e. string syntax is wrong
+        if len(double_quote_pos) % 2 != 0:
+            raise SyntaxError("String Error")
+            quit()
 
         # when number of single quotes are odd i.e. string syntax error
         if len(single_quote_pos) % 2 != 0:
