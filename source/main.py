@@ -38,12 +38,9 @@ class HythonLang() :
                 file_name.split(".")[0]+".हाय"
             ]
             # print( os.path.exists(valid_file_names[0]), os.path.exists(valid_file_names[2]), os.path.exists(valid_file_names[2]) )
-            if os.path.exists(valid_file_names[0]) :
-                self.transpile(valid_file_names[0])
-            elif os.path.exists(valid_file_names[1]) :
-                self.transpile(valid_file_names[1])
-            elif os.path.exists(valid_file_names[2]) :
-                self.transpile(valid_file_names[2])
+            for file in valid_file_names :
+                if os.path.exists(file):
+                    self.transpile(file)
 
 
         if not self.is_transpile_only :
@@ -52,14 +49,14 @@ class HythonLang() :
             subprocess_argv.extend(sys.argv[2:])
             subprocess.call(subprocess_argv)
     
-    def get_transpile_path(self, file_name) :
+    def get_transpiled_path(self, file_name) :
         path = os.path.join(self.root_path, self.transpiled_dir)
         os.makedirs(os.path.join(path, "\\".join(file_name.split("\\")[:-1])), exist_ok = True)
         return os.path.join(self.transpiled_dir, file_name)
 
     def transpile(self,file_name):
         source_file = open(file_name, "rb")
-        new_path = self.get_transpile_path(file_name) # when transpiled_dir is not "" then use this
+        new_path = self.get_transpiled_path(file_name) # when transpiled_dir is not "" then use this
         # TO DO : Need to tranpile into __hython__ and remove _ from the end  of transpled files
         transpiled_file = open(new_path.split(".")[0] + ".py", "wb")
 
@@ -71,10 +68,13 @@ class HythonLang() :
             line = line.decode("utf-8")
             # print(line)
             source_code = sc.Source_Code(line, line_number)
+
+            # get import names if any
             import_name = source_code.get_import().strip()
             if import_name != "" :
                 self.to_be_transpiled.append(import_name + ".py")
             elif not try_written :
+                # if no import write the try statement
                 transpiled_file.write("try:\n".encode("utf-8"))
                 try_written = True
             
