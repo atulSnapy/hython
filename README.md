@@ -21,11 +21,11 @@ Hython is a Hindi Programming Language. Syntax of Hython is just like Python
 
 ```
 परि मुख्य():
-    क <- पुछो("क का मुल्य :")
-    ख <- पुछो("ख का मुल्य :")
+    क = निवेश("क का मुल्य :")
+    ख = निवेश("ख का मुल्य :")
     
-    क <- अंक(क)
-    ख <- अंक(ख)
+    क = अंक(क)
+    ख = अंक(ख)
     
     लिखो("क+ख=", क+ख)
 मुख्य()
@@ -36,7 +36,7 @@ Hython is a Hindi Programming Language. Syntax of Hython is just like Python
 
 Hython Hindi program is tranlated to normal python code. This python code is then executed(run) normally.
 
-उपरांत उदाहरण का पायथन अनुवाद - Above Example in Python :
+उपरांत उदाहरण का पायथन अनुवाद - Above example tranlated in Python :
 ```
 try:
     def मुख्य():      # line-1
@@ -51,6 +51,7 @@ try:
 
 except Exception as e:
     print(e)
+# Hython V : 1.1.2
 ```
 
 
@@ -76,7 +77,7 @@ except Exception as e:
 
 ### 3. हायथन डाउनलोड
 
-* [यहा से हायथन डाउनलोड करें। (संस्करण : 1.1.0)](https://github.com/atulSnapy/hython/blob/master/releases/Release%201/hython_v1.1.0.zip?raw=true)
+* [यहा से हायथन डाउनलोड करें। (संस्करण : 1.1.2)](https://github.com/atulSnapy/hython/blob/master/releases/Release%201/hython_v1.1.2.zip?raw=true)
 * जिप(zip) फाईल को extract करें और "हायथन.exe" एवम् "hython.exe" को hython नाम के फोलडर में रखें।
 * अब उस फोलडर को "system path" में जोड दें।
 * अब कमांड लाईन में "hython --version" या "हायथन --संस्करण" लिख कर हायथन की जाँच कर लें।
@@ -85,7 +86,7 @@ except Exception as e:
 ## हायथन कैसे चलाए?
 
 * पहले हायथन डाउनलोड करें, [यहा से](#हायथन-डाउनलोड)
-* अब अपने पसंदीदा संपादक में हायथन लिखें और फाईल को "<फाईल_का_नाम>.हान" या "<फाईल_का_नाम>.hy" नाम से सेव करें।
+* अब अपने पसंदीदा संपादक में हायथन लिखें और फाईल को "<फाईल_का_नाम>.हाय" या "<फाईल_का_नाम>.hy" नाम से सेव करें।
 * अब कमांड लाईन में "hython <फाईल_का_पर्ण_नाम>" या "हायथन <फाईल_का_पुर्ण_नाम>" से निष्पादित(रन) करें।
 * अगर सिर्फ अनुवाद करना हैं तो "हायथन अ <फाईल_का_पुर्ण_नाम> <अतिरिक्त_फाईले>" या "hython t <फाईल_का_पर्ण_नाम> <अतिरिक्त_फाईले>" से कर सकते हैं।
 
@@ -93,12 +94,12 @@ except Exception as e:
 
 निष्पादित(रन) करें
 
-	hython पहली.हान
+	hython पहली.हाय
     // या
-    हायथन पहली.हान
+    हायथन पहली.हाय
     
 अनुवाद करें
 
-	हायथन अ पहली.हान दुसरा.हान
+	हायथन अ पहली.हाय दुसरा.हाय
     // या
-    hython t पहली.हान दुसरा.हान
+    hython t पहली.हाय दुसरा.हाय
