@@ -1,9 +1,7 @@
 import sys, subprocess, os
-from textwrap import indent
+from version import VERSION
 import source_code as sc
 import eng_hin
-
-VERSION = "1.1.0"
 
 class HythonLang() :
 
@@ -97,6 +95,8 @@ class HythonLang() :
             transpiled_file.write(transpiled_code.encode("utf-8"))
 
         transpiled_file.write("\nexcept Exception as e:\n    print(e)".encode("utf-8"))
+        last_line = "\n# Hython V : " + VERSION
+        transpiled_file.write(last_line.encode("utf-8"))
         transpiled_file.close()
         source_file.close()
 

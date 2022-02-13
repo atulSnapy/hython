@@ -1,6 +1,5 @@
 import pyinstaller_versionfile
-
-VERSION = "1.1.0"
+from version import VERSION
 
 pyinstaller_versionfile.create_versionfile(
     output_file="versionfile.txt",
