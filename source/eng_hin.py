@@ -1,6 +1,6 @@
 
 ids = """
-and	और
+and	च
 as	जैसे
 assert	निश्चित
 break	अवरोध
@@ -8,14 +8,14 @@ class	वर्ग
 continue	जारी
 def	परि
 del	मिटाओ
-elif	या_अगर
+elif	अन्यथा_यदि
 else	अन्यथा
 except	त्रुटि
 False	असत्य
 finally	अन्तिम
 for	क्रमशः
 global	सर्व
-if	अगर
+if	यदि
 import	आयात
 in	में
 is	है
@@ -63,7 +63,7 @@ hash(	हैश(
 help(	मदद(
 hex(	षष्ठ(
 id(	पहचान(
-input(	पूछो(
+input(	निवेश(
 int(	अंक(
 isinstance(	अवतार_है(
 issubclass(	उपवर्ग_है(

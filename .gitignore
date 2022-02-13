@@ -10,3 +10,4 @@ local_test*
 source/build.bat
 source/hython.spec
 source/local_test
+*py.bak
