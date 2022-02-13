@@ -94,8 +94,10 @@ class Source_Code():
             
             # if word not inside inside string
             if pos not in self.string_ch_pos:
-                self.source_line = self.source_line.replace(hi_word, en_word, 1)
-                
+                # left part alredy replaced, now only replace on right part
+                left = self.source_line[:word_replaced_index]
+                right = self.source_line[word_replaced_index:]
+                self.source_line = left + right.replace(hi_word, en_word, 1)
                 # increment all positoin of string as replaced word can varry in length
                 for i in range(pos, len(self.string_ch_pos)):
                     self.string_ch_pos[i] += len(en_word)-len(hi_word)
