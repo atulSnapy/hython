@@ -32,7 +32,7 @@ try	प्रयास
 while	जबतक
 with	लेकर
 yield	उपज
-abs(	समपूर्ण(
+abs(	सम्पूर्ण(
 all(	सब(
 any(	कोईभी(
 ascii(	आसकी(
@@ -50,7 +50,7 @@ dict(	कोश(
 dir(	संहिता(
 divmod(	भाग_शेष(
 enumerate(	क्रमागत(
-eval(	मुल्यांकन(
+eval(	मूल्यांकन(
 exec(	प्रयोग(
 filter(	छानो(
 float(	चल(
@@ -60,7 +60,7 @@ getattr(	गुण_लो(
 globals(	सर्वकोश(
 hasattr(	गुण_है(
 hash(	हैश(
-help(	मदद(
+help(	सहायता(
 hex(	षष्ठ(
 id(	पहचान(
 input(	निवेश(
@@ -69,7 +69,7 @@ isinstance(	अवतार_है(
 issubclass(	उपवर्ग_है(
 iter(	पुनरावर्तक(
 len(	माप(
-list(	सुची(
+list(	सूची(
 locals(	देशकोश(
 map(	नक्शा(
 max(	उच्च(
@@ -86,7 +86,7 @@ property(	गुण(
 range(	सीमा(
 repr(	पठनीय(
 reversed(	उलटा(
-round(	पूूणांकन(
+round(	पूणांकन(
 set(	समुच्चय(
 setattr(	गुण_(
 slice(	टुकडा(
@@ -102,7 +102,7 @@ capitalize(	प्रथम_ऊ(
 casefold(	प्रत्येक_नि(
 center(	मध्य(
 count(	गिनो(
-encode(	कुटलेख(
+encode(	कूटलेख(
 endswith(	अंत_में(
 expandtabs(	रिक्त_(
 find(	खोज(
@@ -114,7 +114,7 @@ isalpha(	अक्षर_है(
 isdecimal(	दशमलव_है(
 isdigit(	अंक_है(
 isidentifier(	पहचानकर्ता_है(
-islower(	नीचला_है(
+islower(	निचला_है(
 isnumeric(	अंक_है(
 isprintable(	छाप_है(
 isspace(	खाली_है(
@@ -122,7 +122,7 @@ istitle(	शीर्षक_है(
 isupper(	ऊपरी_है(
 join(	मेल(
 ljust(	बाया_ज(
-lower(	नीचला(
+lower(	निचला(
 lstrip(	बाया_छाट(
 maketrans(	अनुवाद_तालिका(
 partition(	बांट(
@@ -134,7 +134,7 @@ rsplit(	दाया_विभाजन(
 rstrip(	दाया_छाट(
 split(	विभाजन(
 splitlines(	पंक्ति_विभाजन(
-startswith(	शूरू_में(
+startswith(	शुरू_में(
 strip(	छाट(
 swapcase(	अक्षर_बदलो(
 title(	शीर्षक(
@@ -152,9 +152,9 @@ reverse(	उलटा(
 sort(	क्रम(
 fromkeys(	चाबी_से(
 get(	लो(
-items(	वस्तूए(
+items(	वस्तुए(
 keys(	पूंजी(
-popitem(	वस्तू_निकालो(
+popitem(	वस्तु_निकालो(
 setdefault(	शेष_रखो(
 update(	नया_जोडो(
 values(	मान(
