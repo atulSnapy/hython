@@ -1,5 +1,5 @@
 import sys, subprocess, os
-from version import VERSION
+from build_hython.version import VERSION
 import source_code as sc
 import eng_hin
 

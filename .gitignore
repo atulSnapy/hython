@@ -11,3 +11,6 @@ source/build.bat
 source/hython.spec
 source/local_test
 *py.bak
+*versionfile.txt
+*.spec
+*build.bat
