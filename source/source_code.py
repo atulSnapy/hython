@@ -18,11 +18,7 @@ class Source_Code():
             temp_list = self.source_line.split(" ")
             print(temp_list)
             import_name = temp_list[1]
-            # # adding the new file name
-            # temp_list[1] = temp_list[1].strip()+"_"
-            # print(temp_list)
-            # self.source_line = " ".join(temp_list) + "\n"
-            # print(self.source_line)
+            self.source_line = "import " + import_name
         return import_name
 
     # this will find all the string thing
@@ -50,12 +46,12 @@ class Source_Code():
         
         # when number of double quotes are odd i.e. string syntax is wrong
         if len(double_quote_pos) % 2 != 0:
-            raise SyntaxError("String Error")
+            raise SyntaxError("String Error : odd double quotes : <" + self.source_line + ">")
             quit()
 
         # when number of single quotes are odd i.e. string syntax error
         if len(single_quote_pos) % 2 != 0:
-            raise SyntaxError("String Error")
+            raise SyntaxError("String Error : odd single quotes : <" + self.source_line + ">")
             quit()
 
 

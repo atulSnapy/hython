@@ -13,7 +13,6 @@ class HythonLang() :
         self.transpiled = []
         self.is_transpile_only = False
         self.ids = self.get_ids()
-        self.indent_for_trsanplied = "    "
         self.transpiled_dir = "_hython_" #
 
         if self.show_help() == True :
@@ -45,6 +44,7 @@ class HythonLang() :
             transpiled_main_file_path = os.path.join(self.transpiled_dir, main_file.split(".")[0] + ".py")
             subprocess_argv = ["python3", transpiled_main_file_path]
             subprocess_argv.extend(sys.argv[2:])
+            print("++++++++++++++++++++RUNNING NOW"+transpiled_main_file_path)
             subprocess.call(subprocess_argv)
     
     def get_transpiled_path(self, file_name) :
@@ -66,32 +66,32 @@ class HythonLang() :
             line = line.decode("utf-8")
             # print(line)
             source_code = sc.Source_Code(line, line_number)
+            indent_x = ""
 
             # get import names if any
             import_name = source_code.get_import().strip()
             if import_name != "" :
                 self.to_be_transpiled.append(import_name + ".py")
-            elif not try_written :
-                # if no import write the try statement
-                transpiled_file.write("try:\n".encode("utf-8"))
-                try_written = True
+                transpiled_code = source_code.source_line
+            else :
+                if not try_written :
+                    # if no import write the try statement
+                    transpiled_file.write("try:\n".encode("utf-8"))
+                    try_written = True
             
-            source_code.find_string()
-            source_code.find_comments()
-            for en_word, hi_word in self.ids:
-                source_code.replace(hi_word, en_word)
-            
-            indent_x  = ""
-            if import_name == "" :
-                indent_x = self.indent_for_trsanplied
-
-            transpiled_code = (
-                indent_x
-                + source_code.source_line.rstrip()
-                + "      # line-"
-                + str(source_code.source_line_number)
-                + "\n"
-            )
+                indent_x = "    "
+                source_code.find_string()
+                source_code.find_comments()
+                for en_word, hi_word in self.ids:
+                    source_code.replace(hi_word, en_word)
+                    
+                transpiled_code = (
+                    indent_x
+                    + source_code.source_line.rstrip()
+                    + "      # line-"
+                    + str(source_code.source_line_number)
+                    + "\n"
+                )
             transpiled_file.write(transpiled_code.encode("utf-8"))
 
         transpiled_file.write("\nexcept Exception as e:\n    print(e)".encode("utf-8"))
