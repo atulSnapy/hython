@@ -79,24 +79,64 @@ class Source_Code():
     # this will replace all hi word with english word (actually not all, only those which are needed)
     def replace(self, hi_word, en_word):
 
-        # this will hold till where we have searched/replaced
-        word_replaced_index = 0
+        
+        
+        # position at which word found
+        pos = self.find_to_replace(hi_word) 
+        
         # loop till end on the scanned source_line if hindi word found
-        while self.source_line.find(hi_word, word_replaced_index) != -1:
-            if self.comment_pos >= 0 and self.comment_pos <= word_replaced_index:
+        while pos != -1:
+            if self.comment_pos >= 0 and self.comment_pos >= pos:
                 break
-            # position at which word found
-            pos = self.source_line.find(hi_word, word_replaced_index)
+            
             
             # if word not inside inside string
             if pos not in self.string_ch_pos:
                 # left part alredy replaced, now only replace on right part
-                left = self.source_line[:word_replaced_index]
-                right = self.source_line[word_replaced_index:]
+                str_before = self.source_line
+                left = self.source_line[:pos]
+                right = self.source_line[pos:]
                 self.source_line = left + right.replace(hi_word, en_word, 1)
+                
                 # increment all positoin of string as replaced word can varry in length
                 for i in range(pos, len(self.string_ch_pos)):
                     self.string_ch_pos[i] += len(en_word)-len(hi_word)
+                
+                # if str_before == self.source_line : pos = -1 
             
-            # increment the replaced word to effectively search and loop
-            word_replaced_index = pos + len(en_word)
+            pos = self.find_to_replace(hi_word)
+
+    def find_to_replace(self,hi_word) :        
+        # if hi_word doesn't even exit then return -1, this is just to make things faster
+        # and not search the whole line bekar me
+        if self.source_line_number == 31:
+            # print("IAM38")
+            pass
+        if self.source_line.find(hi_word) == -1:
+            return -1
+
+        pos = -1
+
+        starts =    [' ',':','(',',','.','[','{','+','-','*','/','%']
+        ends =      [' ',':',')',',','.',']','}','+','-','*','/','%']
+        if hi_word.endswith('('): 
+            ends.append('')
+        else :
+            ends.append('(')
+
+        if self.source_line.startswith(hi_word) :
+            for e in ends:
+                pos = self.source_line.find(hi_word+e)
+                if pos > -1 : return pos
+        
+        for s in starts:
+            for e in ends:
+                pos = self.source_line.find(s+hi_word+e)
+                if pos > -1 : return pos + 1 # return pos + 1 as actual word start after s (starts list)
+        
+        if self.source_line.rstrip().endswith(hi_word) :
+            for s in starts:
+                pos = self.source_line.find(s+hi_word)
+                if pos > -1 : return pos + 1 # return pos + 1 as actual word start after s (starts list)
+        
+        return pos

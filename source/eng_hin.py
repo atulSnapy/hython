@@ -1,4 +1,3 @@
-
 ids = """
 and	च
 as	जैसे
@@ -20,13 +19,14 @@ import	आयात
 in	में
 is	है
 lambda	मिराज
-None	शून्य
+None शून्य
 nonlocal	बेस्थानीय
 not	नहीं
 or	या
 pass	छोडो
 raise	उठाओ
 return	वापस
+self स्वयं
 True	सत्य
 try	प्रयास
 while	जबतक
@@ -72,7 +72,7 @@ len(	माप(
 list(	सूची(
 locals(	देशकोश(
 map(	नक्शा(
-max(	उच्च(
+max(	अधिकतम(
 memoryview(	स्मृति_दृश्य(
 min(	न्यून(
 next(	अगला(
@@ -84,7 +84,7 @@ pow(	घात(
 print(	लिखो(
 property(	गुण(
 range(	सीमा(
-repr(	पठनीय(
+__repr__(	__पठनीय__(
 reversed(	उलटा(
 round(	पूणांकन(
 set(	समुच्चय(
@@ -167,8 +167,10 @@ intersection_update(	सर्वनिष्ठ_निकालो(
 isdisjoint(	भिन्न_है(
 issubset(	उपसमुच्चय_है(
 issuperset(	उच्चसमुच्चय_है(
+super( उच्च(
 symmetric_difference(	सममित_अंतर(
 symmetric_difference_update(	सममित_अंतर_जोडो(
 union(	सम्मिलन(
 update(	सम्मिलन_जोडो(
+__init__(   __प्रारंभ__(
 """

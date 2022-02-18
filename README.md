@@ -51,7 +51,7 @@ try:
 
 except Exception as e:
     print(e)
-# Hython V : 1.2.0
+# Hython V : 1.2.1
 ```
 
 
@@ -77,7 +77,7 @@ except Exception as e:
 
 ### 3. हायथन डाउनलोड
 
-* [यहा से हायथन डाउनलोड करें। (संस्करण : 1.2.0)](https://github.com/atulSnapy/hython/blob/master/releases/Release%201/hython_v1.2.0.zip?raw=true)
+* [यहा से हायथन डाउनलोड करें। (संस्करण : 1.2.1)](https://github.com/atulSnapy/hython/blob/master/releases/Release%201/hython_v1.2.1.zip?raw=true)
 * जिप(zip) फाईल को extract करें और "हायथन.exe" एवम् "hython.exe" को hython नाम के फ़ोल्डर में रखें।
 * अब उस फ़ोल्डर को "system path" में जोड दें।
 * अब कमांड लाईन में "hython --version" या "हायथन --संस्करण" लिख कर हायथन की जाँच कर लें।

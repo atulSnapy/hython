@@ -14,3 +14,4 @@ source/local_test
 *versionfile.txt
 *.spec
 *build.bat
+source/_hython_/*
