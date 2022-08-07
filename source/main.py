@@ -44,7 +44,7 @@ class HythonLang() :
             transpiled_main_file_path = os.path.join(self.transpiled_dir, main_file.split(".")[0] + ".py")
             subprocess_argv = ["python3", transpiled_main_file_path]
             subprocess_argv.extend(sys.argv[2:])
-            print("++++++++++++++++++++RUNNING NOW"+transpiled_main_file_path)
+            #print("++++++++++++++++++++RUNNING NOW"+transpiled_main_file_path)
             subprocess.call(subprocess_argv)
     
     def get_transpiled_path(self, file_name) :

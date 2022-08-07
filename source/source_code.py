@@ -1,4 +1,4 @@
-# import re
+import re
 
 
 class Source_Code():
@@ -79,14 +79,14 @@ class Source_Code():
     # this will replace all hi word with english word (actually not all, only those which are needed)
     def replace(self, hi_word, en_word):
 
-        
+        # print(hi_word)
         
         # position at which word found
         pos = self.find_to_replace(hi_word) 
         
         # loop till end on the scanned source_line if hindi word found
         while pos != -1:
-            if self.comment_pos >= 0 and self.comment_pos >= pos:
+            if self.comment_pos >= 0 and self.comment_pos <= pos:
                 break
             
             
@@ -99,8 +99,9 @@ class Source_Code():
                 self.source_line = left + right.replace(hi_word, en_word, 1)
                 
                 # increment all positoin of string as replaced word can varry in length
-                for i in range(pos, len(self.string_ch_pos)):
-                    self.string_ch_pos[i] += len(en_word)-len(hi_word)
+                if len(en_word) != len(hi_word):
+                    for i in range(0, len(self.string_ch_pos)):
+                        self.string_ch_pos[i] += len(en_word)-len(hi_word)
                 
                 # if str_before == self.source_line : pos = -1 
             
@@ -117,26 +118,30 @@ class Source_Code():
 
         pos = -1
 
-        starts =    [' ',':','(',',','.','[','{','+','-','*','/','%']
-        ends =      [' ',':',')',',','.',']','}','+','-','*','/','%']
+        starts =    '[ :(,.[{+\-*/%]{1}' # [' ',':','(',',','.','[','{','+','-','*','/','%']
+        ends =      '[ :),.\]\}+\-*/%(]' # [' ',':',')',',','.',']','}','+','-','*','/','%']
+        mid = hi_word
         if hi_word.endswith('('): 
-            ends.append('')
+            ends += '?' # 0 or 1
+            mid = hi_word.replace('(','\(')
         else :
-            ends.append('(')
+            ends += '{1}' # exactly 1
 
         if self.source_line.startswith(hi_word) :
-            for e in ends:
-                pos = self.source_line.find(hi_word+e)
-                if pos > -1 : return pos
-        
-        for s in starts:
-            for e in ends:
-                pos = self.source_line.find(s+hi_word+e)
-                if pos > -1 : return pos + 1 # return pos + 1 as actual word start after s (starts list)
-        
+            match  = re.search('^'+mid+ends, self.source_line)
+            if match :
+                pos = match.span()[0]
+            if pos > -1 : return pos
+
+        match = re.search(starts+mid+ends, self.source_line)
+        if match :
+            pos = match.span()[0]
+        if pos > -1 : return pos + 1 # return pos + 1 as actual word start after s (starts list)
+
         if self.source_line.rstrip().endswith(hi_word) :
-            for s in starts:
-                pos = self.source_line.find(s+hi_word)
-                if pos > -1 : return pos + 1 # return pos + 1 as actual word start after s (starts list)
+            match = re.search(starts+mid+'$', self.source_line.rstrip())
+            if match :
+                pos = match.span()[0]
+            if pos > -1 : return pos + 1 # return pos + 1 as actual word start after s (starts list)
         
         return pos
